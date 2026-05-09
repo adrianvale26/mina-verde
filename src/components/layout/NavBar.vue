@@ -107,9 +107,9 @@ onUnmounted(() => {
 }
 
 img.mv-nav__logo-img {
-  height: 40px;
+  height: 48px;
   width: auto;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
 }
 
 .mv-nav__logo-icon {
