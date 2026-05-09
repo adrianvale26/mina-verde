@@ -3,7 +3,7 @@
     <div class="mv-nav__inner mv-container">
       <!-- Logo -->
       <RouterLink to="/" class="mv-nav__logo">
-        <img src="/images/logo.png" alt="Mina Verde" class="mv-nav__logo-img" />
+        <img src="/images/logo-outline.png" alt="Mina Verde" class="mv-nav__logo-img" />
         <span class="mv-nav__logo-text">Mina Verde</span>
       </RouterLink>
 
@@ -81,13 +81,13 @@ onUnmounted(() => {
   right: 0;
   z-index: 100;
   height: 64px;
-  background-color: transparent;
+  background-color: var(--mv-green-deep);
   transition: background-color var(--mv-transition), box-shadow var(--mv-transition);
 }
 
 .mv-nav--scrolled {
-  background-color: var(--mv-cream);
-  box-shadow: 0 1px 0 var(--mv-border);
+  background-color: var(--mv-green-deep);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .mv-nav__inner {
@@ -103,7 +103,7 @@ onUnmounted(() => {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--mv-green);
+  color: var(--mv-cream);
 }
 
 img.mv-nav__logo-img {
@@ -115,7 +115,7 @@ img.mv-nav__logo-img {
 .mv-nav__logo-icon {
   width: 28px;
   height: 28px;
-  color: var(--mv-green);
+  color: var(--mv-cream);
 }
 
 .mv-nav__logo-text {
@@ -123,7 +123,7 @@ img.mv-nav__logo-img {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--mv-green);
+  color: var(--mv-cream);
 }
 
 /* Desktop Links */
@@ -138,36 +138,19 @@ img.mv-nav__logo-img {
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  color: var(--mv-charcoal);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   position: relative;
   padding-bottom: 2px;
   transition: color var(--mv-transition);
 }
 
-.mv-nav__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--mv-gold);
-  transform: scaleX(0);
-  transition: transform var(--mv-transition);
-}
-
 .mv-nav__link:hover {
-  color: var(--mv-green);
-}
-
-.mv-nav__link:hover::after,
-.mv-nav__link--active::after {
-  transform: scaleX(1);
+  color: #fff;
 }
 
 .mv-nav__link--active {
-  color: var(--mv-green);
+  color: #fff;
 }
 
 /* CTA */
@@ -194,7 +177,7 @@ img.mv-nav__logo-img {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--mv-charcoal);
+  background-color: rgba(255, 255, 255, 0.85);
   transition: all var(--mv-transition);
   transform-origin: center;
 }
@@ -217,9 +200,9 @@ img.mv-nav__logo-img {
   top: 64px;
   left: 0;
   right: 0;
-  background-color: var(--mv-cream);
-  border-bottom: 1px solid var(--mv-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: var(--mv-green-deep);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--mv-transition-slow);
@@ -241,9 +224,9 @@ img.mv-nav__logo-img {
   padding: 0.875rem 0;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--mv-charcoal);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  border-bottom: 1px solid var(--mv-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mv-nav__mobile-link:last-of-type {
