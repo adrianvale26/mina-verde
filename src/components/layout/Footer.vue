@@ -5,11 +5,7 @@
         <!-- Column 1: Logo + Tagline -->
         <div class="mv-footer__col mv-footer__col--brand">
           <div class="mv-footer__logo">
-            <svg class="mv-footer__logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 8L8 10.5V15.5L12 18L16 15.5V10.5L12 8Z" fill="currentColor"/>
-              <path d="M3 7L12 12M21 7L12 12M12 12V18" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-            </svg>
+            <img src="/images/logo.png" alt="Mina Verde" class="mv-footer__logo-img" />
             <span class="mv-footer__logo-text">Mina Verde</span>
           </div>
           <p class="mv-footer__tagline">
@@ -178,6 +174,12 @@ const handleSubscribe = async () => {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+img.mv-footer__logo-img {
+  height: 36px;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .mv-footer__logo-icon {
