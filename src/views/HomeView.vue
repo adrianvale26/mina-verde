@@ -2,6 +2,10 @@
   <div class="home">
     <!-- 1. Hero Section -->
     <section class="hero">
+      <div class="hero__bg">
+        <img src="/images/hero-1.png" alt="Colombian emerald mountains" class="hero__bg-img" />
+        <div class="hero__bg-overlay"></div>
+      </div>
       <div class="mv-container hero__container">
         <!-- Left: Copy -->
         <div class="hero__copy">
@@ -11,17 +15,6 @@
           <div class="hero__ctas">
             <RouterLink to="/stones" class="mv-btn mv-btn--primary mv-btn--lg">View the Collection</RouterLink>
             <RouterLink to="/quiz" class="mv-btn mv-btn--secondary mv-btn--lg">Take the Quiz</RouterLink>
-          </div>
-        </div>
-        <!-- Right: Emerald visual -->
-        <div class="hero__visual">
-          <div class="hero__gem-wrap">
-            <svg class="hero__gem-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 8L8 10.5V15.5L12 18L16 15.5V10.5L12 8Z" fill="currentColor"/>
-              <path d="M3 7L12 12M21 7L12 12M12 12V18" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-            </svg>
-            <p class="hero__gem-label mv-italic">Colombian Emerald</p>
           </div>
         </div>
       </div>
@@ -330,13 +323,39 @@ const handleNewsletterSubmit = async () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--mv-cream);
   position: relative;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 
 .hero__container {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
   padding-top: 6rem;
@@ -346,6 +365,7 @@ const handleNewsletterSubmit = async () => {
 .hero__label {
   display: block;
   margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero__headline {
@@ -353,12 +373,12 @@ const handleNewsletterSubmit = async () => {
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 1.25rem;
-  color: var(--mv-green);
+  color: #fff;
 }
 
 .hero__subhead {
   font-size: 1.1rem;
-  color: var(--mv-muted);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2.5rem;
   max-width: 44ch;
 }
